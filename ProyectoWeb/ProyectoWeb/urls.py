@@ -21,4 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     #para incluir mas rutas, se necesita poder poner el nombre de la ruta y el include
     path('', include('ProyectoWebApp.urls')),
+    path('servicios/', include('servicios.urls')),
+    path('blog/', include('blog.urls'))
 ]
