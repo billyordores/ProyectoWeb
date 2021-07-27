@@ -19,18 +19,11 @@
                   {% for post in post.categorias.all %}
                    Categoria:{{ post}}
                   {% endfor %}
-              </div>
-             
+              </div>             
             </div>
           </div>
         </div>
       </section>
     
     {% endfor %}
-    Categoria
-    {% for categorias in posts%}    
-      {% for post in categorias.categorias.all %}
-          {{ post}}
-      {% endfor %}
-    {% endfor%}
 {% endblock%} 

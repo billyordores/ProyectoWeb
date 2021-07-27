@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User #implementa el user
 
 # Create your models here.
 class Categoria(models.Model):
@@ -16,7 +16,7 @@ class Post(models.Model):
     titulo=models.CharField(max_length=50)
     contenido=models.CharField(max_length=50)
     imagen=models.ImageField(upload_to='blog', null=True, blank=True)
-    autor=models.ForeignKey(User, on_delete=models.CASCADE)
+    autor=models.ForeignKey(User, on_delete=models.CASCADE) #caida en cascada para eliminar lo que el usuario a creado
     categorias=models.ManyToManyField(Categoria)
     created=models.DateField(auto_now_add=True)
     updated=models.DateField(auto_now_add=True)
